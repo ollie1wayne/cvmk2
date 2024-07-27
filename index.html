@@ -38,6 +38,20 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 var transitLayer = new google.maps.TransitLayer();
 transitLayer.setMap(map);
 
+  var loc = [
+		["<b>Edinbrugh Univeristy</b><br>Graduated with a Masters with Merit in GIS 2018. hi",55.945521, -3.188698],
+		["<b>Nottingham Trent Univeristy</b><br>Graduated with 1st class Honours in Geography 2017.",53.061308, -0.957724],
+		["<b>BWOC petrol station</b><br>Worked as forecourt attendant between 2011 - 2017.",51.244027, -2.945408],
+		["<b>PSO Grade 3 Environmental Agency </b><br>Worked as Flood and Coastal Risk Management Officer with the Environment Agency from 2019 - Present.",50.463917, -4.711472],
+    ["<b>GIS internships Archipelagos</b><br>Interned with Archipelagos for 5 months where i worked with applied lidar, multibeam sonar and sattelite imagery",37.708107, 27.033195],
+    ["<b>Island conservation GVI</b><br>Volunteered with GVI in Seychelle island of Curieuse for two months, working with gaiant turtle, reef sharks and Mangrove forsets",-4.288075, 55.722999]
+		];
+
+    for (var i = 0; i < loc.length; i++) {
+			marker = new L.marker([loc[i][1],loc[i][2]])
+				.bindPopup(loc[i][0])
+				.setMap(map);
+		}
 
 
 
